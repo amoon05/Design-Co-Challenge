@@ -1,0 +1,82 @@
+.container {
+    min-height: 60vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 1vw;
+}
+
+.leftBox {
+    width: 15vw;
+    height: 35px;
+    background-color: blue;
+    margin-bottom: 10px;
+    transition: transform ease-in-out;
+}
+
+.leftBox:hover {
+    animation: bounce 1s;
+    box-shadow: 0 0 10px blue;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rightBox {
+    width: 160px;
+    min-height: 100%;
+    background-color: green;
+    transition: transform ease-in-out;
+}
+
+.rightBox:hover {
+    animation: bounce 1s;
+    box-shadow: 0 0 10px green;
+}
+
+@media screen and (max-width: 576px) {
+    .leftBox { 
+        width: 100%;
+        height: 25px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .rightBox {
+        width: 100%;
+        align-items: baseline;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    .leftBox { 
+        width: 15vw;
+        height: 30px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .rightBox {
+        width: 100%;
+    }
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+}
+}

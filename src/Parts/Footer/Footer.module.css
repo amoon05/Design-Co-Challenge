@@ -1,0 +1,23 @@
+.footer {
+    max-width: 100%;
+    min-height: 15dvh;
+    background-color: black;
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    .footer {
+        height: 12.5vh;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .footer {
+        height: 15vh;
+    }
+}
